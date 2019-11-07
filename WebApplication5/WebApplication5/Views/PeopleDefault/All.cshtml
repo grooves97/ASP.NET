@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "All";
+    var peopleOne = ViewBag.People;
+    var peopleTwo = ViewData["People"];
+}
+
+<h2>All</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Полное имя</th>
+            <th>Номер телефона</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in peopleOne)
+        {
+            <tr>
+                <td>@person.Id</td>
+                <td>@person.FullName</td>
+                <td>@person.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
