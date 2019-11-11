@@ -1,0 +1,7 @@
+﻿<h3>Send your message</h3>
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+    @Html.TextBox("message")
+    <input type="submit" value="Send"/>
+}
