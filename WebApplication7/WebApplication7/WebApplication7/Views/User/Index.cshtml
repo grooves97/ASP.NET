@@ -1,0 +1,40 @@
+﻿@model System.Collections.Generic.IEnumerable<WebApplication7.ViewModels.UserViewModel>
+
+@{
+    ViewBag.Title = "Список пользователей";
+}
+
+<h2>Список пользователей</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.UserName)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </td>
+            <td>
+                Действие
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var model in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(x => model.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => model.CreationDate.ToShortDateString())
+                </td>
+                <td>
+                    @Html.ActionLink("Все работы", "Index", "Jobs")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
