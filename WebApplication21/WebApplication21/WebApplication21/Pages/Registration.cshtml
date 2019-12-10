@@ -1,0 +1,14 @@
+﻿@page
+@model WebApplication21.Pages.RegistrationModel
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<h1>Registration</h1>
+
+
+<form method="post">
+    <input type="email" asp-for="Email"/>
+    <input type="password" asp-for="Password"/>
+    <input type="submit" value="Зарегистрироваться"/>
+</form>
